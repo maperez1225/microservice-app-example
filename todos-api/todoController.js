@@ -33,7 +33,7 @@ class TodoController {
         data.lastInsertedID++
         this._setTodoData(req.user.username, data)
 
-        this._logOperation(OPERATION_CREATE, req.user.username, todo.id)
+        //this._logOperation(OPERATION_CREATE, req.user.username, todo.id)
 
         res.json(todo)
     }
@@ -44,7 +44,7 @@ class TodoController {
         delete data.items[id]
         this._setTodoData(req.user.username, data)
 
-        this._logOperation(OPERATION_DELETE, req.user.username, id)
+        //this._logOperation(OPERATION_DELETE, req.user.username, id)
 
         res.status(204)
         res.send()
