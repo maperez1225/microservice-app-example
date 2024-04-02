@@ -8,7 +8,7 @@ docker run -d --rm --network distribuidos --name users-api -p 8083:8083 maperez1
 
 docker run -d --rm --network distribuidos --name redis -p 6379:6379 redis:7.0-alpine;
 
-docker run -d --rm --network distribuidos --name log-message-processor maperez1225/log-message-processor:0.0.1;
+docker run -d --rm --network distribuidos --name log-message-processor -p 8050:8050 maperez1225/log-message-processor:0.0.1;
 
 docker run -d --rm --network distribuidos --name todos-api -p 8082:8082 maperez1225/todos-api:0.0.1;
 

@@ -7,6 +7,9 @@ USER node
 RUN npm install
 COPY --chown=node:node *.js .
 EXPOSE 8082
+ENV REDIS_HOST=redis
+ENV REDIS_PORT=6379
+ENV REDIS_CHANNEL=log_channel
 ENV JWT_SECRET=PRFT
 ENV TODO_API_PORT=8082
 ENV ZIPKIN_URL=http://zipkin:9411
