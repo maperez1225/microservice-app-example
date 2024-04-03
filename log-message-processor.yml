@@ -38,6 +38,7 @@ metadata:
  labels:
   app: log-message-processor
 spec:
+ type: NodePort
  selector:
   app: log-message-processor
  ports:
